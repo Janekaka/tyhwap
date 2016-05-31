@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>detail</title>
+	<link rel="stylesheet" type="text/css" href="css/detail.css">
+</head>
+<body>
+	<div id="zssss"></div>
+	<div id="detail_top">
+		<a href="javascript: history.go(-1)"><img id="co1" src="images/detail_back.png"></a>
+		<a href="#"><img id="co2" src="images/detail_banner.jpeg"></a>
+	</div>
+	<div id="detail_introduce">
+		<img src="images/detail_con.png"><h4>【演出票务详情页】海南三日游</h4>
+		<p>#寻找最强澳洲游记#迎着印度洋的风，飞驰澳洲西岸，爱旅驴为你打造不一样的旅游体验</p>
+		<span>仅售：<em>￥8990</em></span>
+	</div>
+	<div id="detail_cont">
+		<div id="tab-list">
+		    <ul id="ul1">
+		        <li class="active">活动介绍</li><li>活动详情</li><li>预定须知</li><li>订购流程</li>
+		    </ul>
+		    <div>
+		        <p>40平出租屋大改造 美少女的混搭小窝40平出租屋大改造 美少女的混搭小窝40平出租屋大改造 美少女的混搭小窝</p>
+		    </div>    
+		    <div class="hide">
+		        <p>#寻找最强澳洲游记#迎着印度洋的风，飞驰澳洲西岸40平出租屋大改造 美少女的混搭小窝40平出租屋大改造 美少女的混搭小窝40平出租屋大改造 美少女的混搭小窝</p>
+		    </div>    
+		    <div class="hide">
+		        <p>40平出租屋大改造 #寻找最强澳洲游记#迎着印度洋的风，飞驰澳洲西岸美少女的混搭小窝40平出租屋大改造 美少女的混搭小窝40平出租屋大改造 美少女的混搭小窝</p>
+		    </div>
+		    <div class="hide">
+		        <p>40平出租屋大改造 #寻找最强澳洲游记#迎着印度洋的风，飞驰澳洲西岸美少女的混搭小窝40平出租屋大改造 美少女的混搭小窝40平出租屋大改造 美少女的混搭小窝</p>
+		    </div>
+		</div>
+		<script type="text/javascript">
+			    window.onload = function() {
+			        var oUl1 = document.getElementById("ul1");
+			        var aLi = oUl1.getElementsByTagName("li");
+			        var oDiv = document.getElementById("tab-list");
+			        var aDiv = oDiv.getElementsByTagName("div");
+			        for(var i = 0; i < aLi.length; i++) {
+			            aLi[i].index = i;
+			            aLi[i].onmouseover = function() {
+			                for(var i = 0; i < aLi.length; i++) {
+			                    aLi[i].className = "";
+			                }
+			                this.className = "active";
+			                for(var j = 0; j < aDiv.length; j++) {
+			                    aDiv[j].className = "hide";
+			                }
+			                aDiv[this.index].className = "show";
+			            }        
+			        }
+			    }
+   		</script>
+	</div>
+	<div id="detail_yuding">
+		<ul>
+			<li id="yd_1"><a href="kefu.html">客 服</a></li>
+			<li id="yd_2"><a href="yuding.html">立即预定</a></li>
+		</ul>
+	</div>
+</body>
+</html>

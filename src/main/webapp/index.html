@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/index_halfbottom.css">
+	<script src="js/jquery.1.7.2.min.js"></script>
+	<script src="js/jquery.img_silder.js"></script>
+	<script>
+	        $(function(){
+	            $('#silder').imgSilder({
+					s_width:'100%', //容器宽度
+					s_height:180, //容器高度
+					is_showTit:true, // 是否显示图片标题 false :不显示，true :显示
+					s_times:3000, //设置滚动时间
+					css_link:'css/style.css'
+				});
+			});
+    </script>
+</head>
+<body>
+	<div id="top">
+		<div class="ser_sel">
+			<form>
+			<select class="select_address">
+				<option>天津</option>
+				<option>北京</option>
+				<option>河北</option>
+				<option>山东</option>
+				<option>安徽</option>
+			</select></form><input type="text" placeholder="目的地/景点/酒店/游轮"></input>
+		</div>
+		<img id="img2" src="images/logo.png">
+	</div>
+	<!-- top end -->
+	<div id="banner">
+		<div class="banner_t">
+
+			<div class="silder" id="silder">
+				  <ul class="silder_list" id="silder_list">
+				    <li> <img src="images/1.jpg" border="0" alt=""> </li>
+				    <li> <img src="images/2.jpg" border="0" alt=""> </li>
+				    <li> <img src="images/3.jpg" border="0" alt=""> </li>
+				    <li> <img src="images/4.jpg" border="0" alt=""> </li>
+				  </ul>
+			</div>
+		</div>
+	</div>
+	<!-- banner end -->
+	<div id="list">
+		<ul>
+			<li><a href="getlist?type=luxian"><img src="images/cjy.png"></a></li>
+			<li><a href="getlist?type=yanchu"><img src="images/djjd.png"></a></li>
+			<li><a href="getlist?type=qinzi"><img src="images/zby.png"></a></li>
+			<li><a href="getlist?type=menpiao"><img src="images/jdmp.png"></a></li>
+			<li><a href="getlist?type=zhuanxiang"><img src="images/yl.png"></a></li>
+			<li><a href="getlist?type=huwai"><img src="images/gny.png"></a></li>
+		</ul>
+	</div>
+	<!-- list end -->
+	<div id="tianchong"></div>
+	<hr style="width: 95%;margin: 0 auto;">
+	<!-- tianchong end -->
+	<!-- 
+	<div id="content">
+		<div class="con_new">
+			<img id="img1" src="images/tiao.png">
+			<a href="#"><img id="img3" src="images/linggan.jpg"></a>
+		</div>
+
+		<div class="con_hot">
+			<div class="con_top">
+				<h2>热门专题</h4>
+				<p>懂旅行-探索最IN最实惠的旅游玩法</p>
+			</div>
+			<div class="con_bot">
+				<a href="detail.html"><img src="images/list1.jpg"></a>
+				<h3>探寻那些奇妙的盆友</h3>
+				<p>北京野生动物园成人票北京野生动物园成人票</p>
+				<div>
+					<ul>
+						<li id="zs">￥8900起</li>
+						<li id="zsc">立省1999</li>
+					</ul>
+				</div>
+			</div>
+			<div class="con_bot">
+				<a href="detail.html"><img src="images/list2.jpg"></a>
+				<h3>探寻那些奇妙的盆友</h3>
+				<p>北京野生动物园成人票北京野生动物园成人票</p>
+				<div>
+					<ul>
+						<li id="zs">￥8900起</li>
+						<li id="zsc">立省1999</li>
+					</ul>
+				</div>
+			</div>
+			<div class="con_bot">
+				<a href="detail.html"><img src="images/list3.jpg"></a>
+				<h3>探寻那些奇妙的盆友</h3>
+				<p>北京野生动物园成人票北京野生动物园成人票</p>
+				<div>
+					<ul>
+						<li id="zs">￥8900起</li>
+						<li id="zsc">立省1999</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	 -->
+	<!-- content end -->
+	<div id="content">
+		<div style="width:100%;text-align:center;margin-bottom:10px;">-------------<span class="title">特色活动</span>-------------</div>
+		<table>
+			<!-- <tr>
+				<td><hr width="60px"></td>
+				<td style="text-align:left;">特色活动</td>
+				<td><hr width="60px" align="right" style="margin-right:0px;padding-right:0px;"></td>
+				<td style="text-align:center;table-layout:fixed;" colspan="3">-------------<span class="title">特色活动</span>-------------</td>
+			</tr> -->
+			<tr>	
+				<td style="width:40%;text-align:center;" rowspan="3"><img src="tyhpics/luxian/2016-04-27-1461730142507/1461730142507_0.jpg" width="100%" height="120px"></td>
+				<td style="text-align:center;" colspan="2">野三坡百里峡常规二日游</td>
+			</tr>
+			<tr>
+				<td style="width:30%;text-align:center;">任意时间</td>
+				<td style="width:30%;text-align:center;">￥368起</td>
+			</tr>
+			<tr>	
+				<td style="text-align:center;" colspan="2"><a href="getdetail?type=luxian&id=18">查看详情</a></td>
+			</tr>
+		</table>
+		<table style="margin-top:10px">
+			<!-- <tr>
+				<td><hr width="60px"></td>
+				<td style="text-align:left;">特色活动</td>
+				<td><hr width="60px" align="right" style="margin-right:0px;padding-right:0px;"></td>
+				<td style="text-align:center;table-layout:fixed;" colspan="3">-------------<span class="title">特色活动</span>-------------</td>
+			</tr> -->
+			<tr>	
+				<td style="width:40%;text-align:center;" rowspan="3"><img src="tyhpics/huwai/2016-04-23-1461396695361/1461396695361_0.jpg" width="100%" height="120px"></td>
+				<td style="text-align:center;" colspan="2">青海湖骑行</td>
+			</tr>
+			<tr>
+				<td style="width:30%;text-align:center;">每年6月到10月</td>
+				<td style="width:30%;text-align:center;">￥1500起</td>
+			</tr>
+			<tr>	
+				<td style="text-align:center;" colspan="2"><a href="getdetail?type=huwai&id=2">查看详情</a></td>
+			</tr>
+		</table>
+		<div style="width:100%;text-align:center;margin-bottom:10px;margin-top:15px;">-------------<span class="title">热门产品</span>-------------</div>
+		<table>
+			<!-- <tr>
+				<td><hr width="60px"></td>
+				<td style="text-align:left;">特色活动</td>
+				<td><hr width="60px" align="right" style="margin-right:0px;padding-right:0px;"></td>
+				<td style="text-align:center;table-layout:fixed;" colspan="3">-------------<span class="title">特色活动</span>-------------</td>
+			</tr> -->
+			<tr>	
+				<td style="width:40%;text-align:center;" rowspan="3"><img src="tyhpics/menpiao/2016-04-15-1460691795146/1460691795146_0.jpg" width="100%" height="120px"></td>
+				<td style="text-align:center;" colspan="2">天津凯旋王国大学生票</td>
+			</tr>
+			<tr>
+				<td style="width:30%;text-align:center;">每周六、周日</td>
+				<td style="width:30%;text-align:center;">￥150</td>
+			</tr>
+			<tr>	
+				<td style="text-align:center;" colspan="2"><a href="getdetail?type=menpiao&id=15">查看详情</a></td>
+			</tr>
+		</table>
+		<table style="margin-top:10px">
+			<!-- <tr>
+				<td><hr width="60px"></td>
+				<td style="text-align:left;">特色活动</td>
+				<td><hr width="60px" align="right" style="margin-right:0px;padding-right:0px;"></td>
+				<td style="text-align:center;table-layout:fixed;" colspan="3">-------------<span class="title">特色活动</span>-------------</td>
+			</tr> -->
+			<tr>	
+				<td style="width:40%;text-align:center;" rowspan="3"><img src="tyhpics/yanchu/2016-04-23-1461395119930/1461395119930_0.jpg" width="100%" height="120px"></td>
+				<td style="text-align:center;" colspan="2">海上探戈</td>
+			</tr>
+			<tr>
+				<td style="width:30%;text-align:center;">2016年07月22日</td>
+				<td style="width:30%;text-align:center;">￥200</td>
+			</tr>
+			<tr>	
+				<td style="text-align:center;" colspan="2"><a href="getdetail?type=yanchu&id=2">查看详情</a></td>
+			</tr>
+		</table>
+	</div>
+	<div id="footer">
+		<ul>
+			<li><a href="#"><img src="images/home.png"><span>首页</span></a></li>
+			<li><a href="detail.html"><img src="images/faxian.png"><span>发现</span></a></li>
+			<li><a href="kefu.html"><img src="images/kefu.png"><span>联系我们</span></a></li>
+			<li><a href="yuding.html"><img src="images/conzs.png"><span>我的</span></a></li>
+		</ul>
+	</div>
+</body>
+</html>

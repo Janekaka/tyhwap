@@ -1,0 +1,120 @@
+/*js部分样式*/
+a{
+	display: block;
+	clear: both;
+}
+ *{margin:0;padding:0;font:normal 12px "微软雅黑";color:#000000;}
+     ul{list-style-type: none;}
+     a{text-decoration: none;}
+
+     #tab-list{width: 95%;height:190px;margin: 10px auto;}
+
+     #ul1{border-bottom: 2px solid #00a0ea;height: 32px;}
+     #ul1 li{border-radius:5px 5px 0 0;display: inline-block;width: 60px;line-height: 30px;text-align: center;border: 1px solid #DEDBDB;border-bottom: none;}
+     #ul1 li:hover{cursor: pointer;}/*指示经过的的时候鼠标显示为小手*/
+     #ul1 li.active{border-top:2px solid #00a0ea;border-bottom:2px solid #FFFFFF;}
+
+     #tab-list div{border: 1px solid #00a0ea;border-top: none;height: 150px;
+     	border-radius: 0 0 5px 5px;}
+     #tab-list div p{
+     	line-height: 20px;
+     	padding: 5px 10px;
+     }
+     
+     .show{display: block;}.hide{display: none;}
+
+#zssss{
+	width: 100%;
+	height: 10px;
+}
+#detail_top{
+	width: 95%;
+	margin: 0 auto;
+	position: relative;
+	border-radius: 5px;
+}
+#co1{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	background-color: #090808;
+	opacity: 0.5;
+	border-radius: 25px;
+	top: 10px;
+	left: 10px;
+}
+#co2{
+	width: 100%;
+	height: 230x;
+	border-radius: 5px;
+}
+
+#detail_introduce{
+	width: 95%;
+	height: 100px;
+	background-color: #FDFDFD;
+	border: 1px solid #D1D0D0;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+#detail_introduce h4{
+	font-size: 16px;
+	display: inline;
+	float: left;
+	margin-top: 8px;
+}
+#detail_introduce img{
+	width: 15px;
+	height: 15px;
+	margin: 10px;
+	opacity: 0.5;
+	float: left;
+}
+#detail_introduce p{
+	clear: both;
+	margin-left: 10px;
+	text-indent: 10px;
+}
+#detail_introduce span{
+	margin-left: 67%;
+	font-family: "微软雅黑";
+	color: #A7A4A4;
+}
+#detail_introduce em{
+	color: #FC9D17;
+	font-size: 18px;
+}
+
+#detail_yuding{
+	width: 95%;
+	height: 40px;
+	border-radius: 3px;
+	margin: 0 auto;
+	border: 1px solid #CDCDCD;
+	box-shadow:0 0 3px #969696;
+	margin-bottom: 10px;
+}
+#detail_yuding a{
+	height: 40px;
+	display: block;
+	line-height: 40px;
+	color: #E4E4E4;
+}
+#yd_1{
+	list-style-type: none;
+	width: 40%;
+	float: left;
+	text-align: center;
+	background-color: #EAE9E9;
+	
+}
+#yd_1 a{
+	color: #878787;
+}
+#yd_2{
+	list-style-type: none;
+	width: 60%;
+	float: left;
+	text-align: center;
+	background-color: #00a0ea;
+}

@@ -1,0 +1,33 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.container{
+	width: 1000px;
+	margin: 10px auto;
+	background-color: #F3F3F3;
+}
+#legend{
+	width: 100%;
+	padding-top: 20px;
+}
+#legend .xx{
+	margin: 0 auto;
+	font-size: 22px;
+}
+#zz{
+	margin-left: 50px;
+}
+.control-group{
+	width: 100%;
+}
+.control-label1{
+	margin-left: 450px;
+	font-size: 22px;
+}
+#zss{
+	float: right;
+	width: 60px;
+	height: 30px;
+
+}

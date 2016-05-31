@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<title>立即预定</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: url("images/bg.jpg");
+			background-size: 100% auto;
+			position: relative;
+		}
+		img{
+			width: 24px;
+			height: 24px;
+			float: left;
+			margin-left: 25px;
+			margin-top: 10px;
+		}
+		input{
+			float: left;
+			margin-top: 10px;
+			height: 25px;
+			background-color: #F1F1F1;
+			border: none;
+			outline: medium;
+			text-indent: 10px;
+		}
+		#yd_top{
+			width: 100%;
+			margin-top: 40px;
+		}
+		#yd_top h2{
+			width: 100%;
+			text-align: center;
+			color: #FFFFFF;
+		}
+		#yd_con{
+			width: 85%;
+			border-radius: 5px;
+			margin: 0 auto;
+			background-color: #F1F1F1;
+			margin-top: 30px;
+		}
+		.con_user{
+			width: 100%;
+			height: 45px;
+		}
+		.con_key{
+			width: 100%;
+			height: 45px;
+		}
+		.btn1{
+			width: 85%;
+			margin: 0 auto;
+			margin-top: 40px;
+		}
+		.btn1 button{
+			width: 100%;
+			height: 35px;
+			border-radius: 5px;
+			background-color: #268AFE;
+			color: #FFFFFF;
+			outline: medium;
+			font-size: 14px;
+			font-family: "微软雅黑"
+		}
+		.btn2{
+			width: 85%;
+			margin: 15px auto;
+		}
+		.btn2 button{
+			width: 100%;
+			height: 35px;
+			border-radius: 5px;
+			background-color: #268AFE;
+			color: #FFFFFF;
+			outline: medium;
+			font-size: 14px;
+			font-family: "微软雅黑"
+		}
+		span{
+			font-size: 12px;
+			float: right;
+			margin-right: 10%;
+			margin-top: 1em;
+		}
+		span a{
+			color: #FFFFFF;
+			text-decoration: none;
+		}
+		#ke_c1{
+			width: 25px;
+			height: 25px;
+			border-radius: 18px;
+			background-color: #000000;
+			position: absolute;
+			margin-top: -25px;
+			margin-left: 10px;
+			opacity: 0.5;
+		}
+	</style>
+	<script type="text/javascript"src="js/jquery.1.7.2.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#regist_button").click(function(){
+			$("#count_span").html("");
+			$("#password_span_1").html("");
+			$("#password_span_2").html("");
+			var name = $("#regist_username").val().trim();
+			var password = $("#regist_password").val().trim();
+			var final_password = $("#final_password").val().trim();
+			var ok = true;
+			if(name==""){
+				$("#count_span").html("手机号为空");
+				ok = false;
+			}else if(/^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$/.test(name)){
+				$("#count_span").html("手机号输入不正确");
+				ok = false;
+			}
+			if(password==""){
+				$("#password_span_1").html("密码为空");
+				ok = false;
+			}else if(password.length<6){
+				$("#password_span_1").html("密码位数太少");
+				ok = false;
+			}
+			if(final_password==""){
+				$("#password_span_2").html("确认密码为空");
+				ok = false;
+			}else if(password!=final_password){
+				$("#password_span_2").html("密码不一致");
+				ok = false;
+			}
+			if(ok){
+				$.ajax({
+					//url:"http://localhost:8080/tyhwap/regist",
+					url:"/tyhwap/regist",   //在服务器上是 /regist
+					type:"post",
+					data:{"mobile":name,"password":password},
+					dataType:"json",
+					success:function(result){
+						if(result.status==0){
+							alert(result.msg);//提示成功
+							window.location.href="index.html";
+						}else if(result.status==1){
+							$("#count_span").html(result.msg);
+						}
+					},
+					error:function(){
+						alert("注册异常");
+					}
+				});
+			}
+		});
+	});
+	</script>
+</head>
+<body>
+	<a href="javascript: history.go(-1)"><img id="ke_c1" src="images/detail_back.png"></a>
+	<div id="yd_top">
+		<h2>手机注册</h2>
+	</div>
+	<div id="yd_con">
+		<div class="con_user">
+			<img src="images/tel.png">
+			<input type="text" id="regist_username" placeholder="请输入手机号码"></input>
+			<span id="count_span"></span>
+		</div>
+		<hr style="width: 85%;margin: 0 auto" />
+		<!--
+		<div class="con_key">
+			<img src="images/pen.png">
+			<input type="text" placeholder="输入手机验证码"></input>
+		</div>
+		<hr style="width: 85%;margin: 0 auto" />
+		 -->
+		<div class="con_key">
+			<img src="images/password.png">
+			<input type="password" id="regist_password" placeholder="请输入密码"></input>
+			<span id="password_span_1"></span>
+		</div>
+		<hr style="width: 85%;margin: 0 auto" />
+		<div class="con_key">
+			<img src="images/password.png">
+			<input type="password" id="final_password" placeholder="请再次输入密码"></input>
+			<span id="password_span_2"></span>
+		</div>
+	</div>
+	<div id="yd_btn">
+		<div class="btn1">
+			<button id="regist_button">注册并登陆</button>
+		</div>
+	</div>
+</body>
+</html>

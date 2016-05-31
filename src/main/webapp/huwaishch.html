@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="css/menpiaoshch.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    
+    <script type="text/javascript" src="ckeditorcus/ckeditor.js"></script> 
+    <!-- <script src="//cdn.ckeditor.com/4.5.8/standard/ckeditor.js"></script> -->
+    
+    <title>上传户外活动信息</title>
+    
+    <script>
+    window.onload = function()
+    {
+        CKEDITOR.replace( 'editor01' );
+        CKEDITOR.replace( 'editor02' );
+        CKEDITOR.replace( 'editor03' );
+        CKEDITOR.replace( 'editor04' );
+    };
+    
+    function upload(){
+    	var data01 = CKEDITOR.instances.editor01.getData();
+    	//alert(data01);
+    }
+    function addTags(){
+    	var str = '<input type=\"text\" placeholder=\"户外活动标签，例如：演唱会\" class=\"input-xlarge\" name=\"tags\">&nbsp;';
+    	$('#div_tag').append(str);
+    }
+    function addImages(){
+    	var str = '<input class=\"input-file\" name=\"files\" type=\"file\">&nbsp;';
+    	$('#div_images').append(str);
+    }
+	</script>
+    
+</head>
+<body>
+	<div class="container">
+  		<form class="form-horizontal" action="upload" method="post" enctype="multipart/form-data">
+    		<fieldset>
+    		<input type="hidden" name="type" value="huwai" >
+      		<div id="legend" class="">
+        		<legend class="xx">户外活动基本信息</legend><br />
+            <hr style="width: 900px; margin-left: 50px;" />
+      		</div>
+
+          <br />
+          <div id="zz">
+            <div class="control-group">
+        <!-- Text input-->
+              <label class="control-label" for="input01">户外活动名称：</label><input type="text" placeholder="户外活动名称或标题" class="input-xlarge" name="name">
+          </div>
+          <br />
+        <div class="control-group">
+            <!-- Text input-->
+              <label class="control-label" for="input01">户外活动简介：</label>
+              <!-- <input type="text" placeholder="户外活动简短介绍" class="input-xlarge" name="jianjie"> -->
+              <br />
+              <textarea name="jianjie" cols="40" rows="5" style="margin-left:75px"></textarea>
+          </div>
+          <br />
+          <div class="control-group">
+            <!-- Text input-->
+              <label class="control-label" for="input01">户外活动价格：</label><input type="text" placeholder="￥" name="price">&nbsp;<input type="text" placeholder="原价：" name="oldprice">
+          </div>
+          <br />
+          <div class="control-group">
+              <label class="control-label">缩略图：（用在户外活动列表页面，建议尺寸320 X 320 像素）</label><input class="input-file" name="files" type="file"> 
+        </div>
+          <br />
+        <div class="control-group">
+              <!-- Select Basic -->
+              <label class="control-label">户外活动分组：</label><select class="input-xlarge" name="group">
+                    <option>户外活动分组</option>
+                    
+                </select><button class="btn-small" type="button">添加分组</button>
+          </div>
+          <br />
+          <div class="control-group">
+              <label class="control-label for="input01"">标签：</label><input type="text" placeholder="户外活动标签" class="input-xlarge" name="tags"><button class="btn-small" type="button" onclick="addTags()">添加标签</button>
+              <div id="div_tag"></div>
+        </div>
+        <br />
+        <div class="control-group">
+            <!-- Text input-->
+              <label class="control-label" for="input01">排序权重：</label><input type="text" placeholder="整数，数字越大越靠前" class="input-xlarge" name="weight">
+        </div>
+        <br />
+        
+  
+  <!-- <div id="legend" class="">
+          <legend class="">户外活动详情:</legend><br />
+    </div> -->
+    
+        <div class="control-group">
+              <label class="control-label">活动图片：</label> <button class="btn-small" type="button" onclick="addImages()">添加图片</button>
+              <!-- File Upload -->  
+              <input class="input-file" name="files" type="file"><br />
+              <div id="div_images"></div> 
+        </div>
+          </div>
+    		
+			<br />
+    		<div class="control-group">
+          		<!-- Textarea -->
+          		<label class="control-label1">活动主题</label>
+              <hr style="width: 900px; margin-left: 50px;" />
+              <br />
+          			<div class="controls">
+            			<div class="textarea">
+                  			<textarea class="" name="editor01" id="editor01"> </textarea>
+            			</div>
+          			</div>
+        	</div>
+        	<br />
+        	<div class="control-group">
+          		<!-- Textarea -->
+          		<label class="control-label1">活动内容</label>
+           
+              <hr style="width: 900px; margin-left: 50px;" />
+                 <br />
+          			<div class="controls">
+            			<div class="textarea">
+                  			<textarea class="" name="editor02" id="editor02"> </textarea>
+            			</div>
+          			</div>
+        	</div>
+        	<br />
+        	<div class="control-group">
+          		<!-- Textarea -->
+          		<label class="control-label1">预定须知</label>
+              <hr style="width: 900px; margin-left: 50px;" />
+              <br />
+          			<div class="controls">
+            			<div class="textarea">
+                  			<textarea class="" name="editor03" id="editor03"> </textarea>
+            			</div>
+          			</div>
+        	</div>
+        	<br />
+        	<div class="control-group">
+          		<!-- Textarea -->
+          		<label class="control-label1">费用说明</label>
+              <hr style="width: 900px; margin-left: 50px;" />
+              <br />
+          			<div class="controls">
+            			<div class="textarea">
+                  			<textarea class="" name="editor04" id="editor04"> </textarea>
+            			</div>
+          			</div>
+        	</div>
+
+    </fieldset>
+    
+    <br />
+    <!-- <div class="controls">
+            <button class="btn btn-success" onclick="upload()">上传</button>
+    </div>  -->
+    <input id="zss" type="submit" value="提交">
+  </form>
+  <br /><br />
+</div>
+
+</body>
+</html>

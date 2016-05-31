@@ -1,0 +1,19 @@
+.title{
+	font-size:18px;
+	font-family:Microsoft YaHei;
+	margin-left:25px;
+	margin-right:25px;
+}
+table{
+	width:100%;
+	border-collapse:collapse;
+	font-size:15px;
+	font-family:Microsoft YaHei;
+}
+
+table, td, th{
+  	border:1px solid black;
+}
+a{
+	text-decoration: none;
+}
